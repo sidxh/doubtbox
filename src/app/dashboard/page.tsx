@@ -101,7 +101,7 @@ const DoubtBox: React.FC = () => {
   );  
 
   const DoubtForm: React.FC = () => (
-    <div className="mt-4 absolute bottom-0 w-full p-4">
+    <div className="mt-4 absolute bottom-0 w-full p-4 text-black">
       {/* Doubt Form */}
       <input
         type="text"
