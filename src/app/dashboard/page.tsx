@@ -74,9 +74,9 @@ const DoubtBox: React.FC = () => {
   };
 
   const ChatMessages: React.FC = () => (
-    <div id="chatbox" className="overflow-y-auto h-[60%] rounded-2xl text-[0.75rem] p-2">
+    <div id="chatbox" className="overflow-y-auto h-[60%] rounded-2xl text-[0.75rem] p-4">
       {doubts.map((doubt) => (
-        <div key={doubt.id} className="mb-2 border-gray-500 border-2 rounded-xl p-2">
+        <div key={doubt.id} className="mb-2 border-gray-500 border-2 rounded-xl p-2 bg-blue-300">
           <strong>{doubt.title}</strong>: {doubt.description}
           <div>
             <div className="mt-2">
@@ -87,10 +87,10 @@ const DoubtBox: React.FC = () => {
               ))}
             </div>
             <div className="mt-2">
-              <button onClick={() => handleVote(doubt.id, 'upvote')} className="text-green-500">
+              <button onClick={() => handleVote(doubt.id, 'upvote')} className="text-green-600 font-bold">
                 Upvote ({doubt.upvotes})
               </button>
-              <button onClick={() => handleVote(doubt.id, 'downvote')} className="text-red-500 ml-2">
+              <button onClick={() => handleVote(doubt.id, 'downvote')} className="text-red-500 ml-2 font-bold">
                 Downvote ({doubt.downvotes})
               </button>
             </div>
@@ -135,11 +135,11 @@ const DoubtBox: React.FC = () => {
     const filteredDoubts = getFilteredDoubts(minUpvotes);
   
     return (
-      <div className="flex-1 border-2 border-gray-500 rounded-2xl text-[0.75rem] p-2">
-        <h2 className="text-lg font-semibold mb-4">{title}</h2>
+      <div className="flex-1 border-4 border-gray-500 rounded-2xl text-[0.75rem] p-4">
+        <h2 className="text-lg font-semibold mb-4 text-white">{title}</h2>
         <ul>
           {filteredDoubts.map((doubt) => (
-            <li key={doubt.id} className="mb-4 border-gray-500 border-2 rounded-xl p-2">
+            <li key={doubt.id} className="mb-4 border-gray-500 border-2 rounded-xl p-2 bg-blue-300">
               <strong>{doubt.title}</strong>: {doubt.description}
               <div>
                 <div className="mt-2">
@@ -150,10 +150,10 @@ const DoubtBox: React.FC = () => {
                   ))}
                 </div>
                 <div className="mt-2">
-                  <button onClick={() => handleVote(doubt.id, 'upvote')} className="text-green-500">
+                  <button onClick={() => handleVote(doubt.id, 'upvote')} className="text-green-600 font-bold">
                     Upvote ({doubt.upvotes})
                   </button>
-                  <button onClick={() => handleVote(doubt.id, 'downvote')} className="text-red-500 ml-2">
+                  <button onClick={() => handleVote(doubt.id, 'downvote')} className="text-red-500 ml-2 font-bold">
                     Downvote ({doubt.downvotes})
                   </button>
                 </div>
@@ -166,9 +166,9 @@ const DoubtBox: React.FC = () => {
   };
 
   return (
-    <div className="flex space-x-4 p-10 gap-10 bg-black text-white h-[100vh]">
+    <div className="flex space-x-4 p-10 gap-10 bg-[#06080e] h-[100vh]">
       {/* Column 1: Chatbox */}
-      <div className="flex-1 border-2 border-gray-500 flex flex-col relative h-full rounded-2xl">
+      <div className="flex-1 border-4 border-gray-500 flex flex-col relative h-full rounded-2xl">
         <ChatMessages />
         <DoubtForm />
       </div>
