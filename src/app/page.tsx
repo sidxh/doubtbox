@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <>
+    <div>
       <div className="mb-12 mt-28 sm-mt-40 flex flex-col items-center justify-center text-center">
         <div className='mx-auto mb-4 flex max-w-fit items-center justify-center space-x-2 overflow-hidden rounded-full border border-gray-200 bg-white px-7 py-2 shadow-md background-blur transition-all hover:border-gray-300 hover:bg-white/50'>
           <p className='text-sm font-semibold text-gray-700'>
@@ -15,8 +15,8 @@ export default function Home() {
           <p className='mt-5 max-w-prose text-zinc-400 sm:text-lg'>
           DoubtBox allows you to streamline the rapid flow of doubts with focused upvoting and downvoting, enabling educators to teach with real-time notifications.</p>
           <div className="my-10 flex gap-6">
-            <Link href='/dashboard'><button className="px-4 py-2 bg-white text-black rounded-xl">Get Started</button></Link>
-            <Link href='/dashboard'><button className="px-4 py-2 bg-white text-black rounded-xl">Explore</button></Link>
+            <Link href='/dashboard'><button className="px-4 py-2 bg-white text-black rounded-xl border-2 border-black">Get Started</button></Link>
+            <Link href='/dashboard'><button className="px-4 py-2 bg-white text-black rounded-xl border-2 border-black">Explore</button></Link>
           </div>
       </div>
       
@@ -48,6 +48,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
