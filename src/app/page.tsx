@@ -10,7 +10,7 @@ export default function Home() {
             DoubtBox is now public!
           </p>
         </div>
-        <h1 className='mt-6 max-w-4xl text-5xl font-bold md:text-6xl lg:text-7xl'>
+        <h1 className='mt-6 max-w-4xl text-5xl font-bold md:text-6xl lg:text-7xl text-white'>
         Where <span className='text-blue-600'>Doubts Find Order </span>Through Consensus</h1>
           <p className='mt-5 max-w-prose text-zinc-400 sm:text-lg'>
           DoubtBox allows you to streamline the rapid flow of doubts with focused upvoting and downvoting, enabling educators to teach with real-time notifications.</p>
